@@ -1,0 +1,765 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color:whitesmoke
+    
+}
+
+
+.first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: orange;
+}
+
+/* Phần bên trái (first-left) */
+.first-left img {
+    width: 150px; /* Điều chỉnh kích thước hình ảnh */
+    height: auto;
+}
+
+/* Phần chính giữa (main-top) */
+.main-top h1 {
+    font-size: 60px;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+/* Phần bên phải (first-right) */
+.first-right img {
+    width: 200px; /* Điều chỉnh kích thước hình ảnh */
+    height: auto;
+    
+}
+.container{
+    
+    display: flex; /* Dùng flexbox để căn chỉnh các phần tử */
+    justify-content: center; /* Căn giữa nội dung ngang */
+    align-items: center; /* Căn giữa nội dung dọc */
+    flex-direction: column; /* Đặt các phần tử con theo chiều dọc */
+    text-align: center; /* Căn chỉnh văn bản trong container */
+    margin: 0 auto; /* Đảm bảo container không bị lệch sang trái */
+    max-width: 800px; /* Giới hạn chiều rộng container */
+    padding: 20px;
+
+} /*video */
+.my-video {
+    position: absolute;
+    min-width: 50%;
+    top: 75%;
+    transform: translateY(-90%); /* Đặt kích thước cố định cho video */
+    border: 5px solid orange; /* Viền video */
+    border-radius: 5px; /* Bo góc */
+    box-shadow: 0 4px 8px rgba(108, 20, 20, 0.2); /* Hiệu ứng đổ bóng */
+}
+.description{
+    flex: 1; /* Văn bản chiếm không gian còn lại */
+    font-family: Arial, sans-serif; /* Font dễ đọc */
+    font-size: 1.2rem; /* Kích thước chữ lớn hơn */
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+    color: whitesmoke; /* Màu chữ tối */
+    text-align: justify; /* Căn đều hai bên văn bản */
+    margin-top: auto; /* Đảm bảo không có khoảng trống phía trên */
+    margin-left: auto;
+    margin-bottom: auto;
+}
+.dulieu {
+    display: flex; /* Enable flex layout */
+    justify-content: space-between; /* Space between the two sections */
+    align-items: flex-start; /* Align items at the top */
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 1.2rem; /* Font size */
+    line-height: 1.6; /* Line height */
+    color: whitesmoke; /* Text color */
+    margin: 300px auto 0; /* Center the container and adjust spacing */
+    width: 80%; /* Set container width */
+    gap: 20px; /* Add space between the sections */
+    padding: 20px; /* Padding inside the container */
+    border: 3px solid orange; /* Orange border around the whole container */
+    border-radius: 10px; /* Rounded corners for the container */
+    background-color: #333; /* Background color */
+}
+
+.dulieu1{
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding: 10px; /* Add padding inside the title */
+    border: 3px solid orange; /* Orange border around the title */
+    border-radius: 8px; /* Rounded corners for the title */
+    background-color: #444; /* Slightly lighter background for the title */
+}
+
+.dulieu p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+.dulieu2 {
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding: 10px; /* Add padding inside the title */
+    border: 3px solid red; /* Orange border around the title */
+    border-radius: 8px; /* Rounded corners for the title */
+    background-color: #444; /* Slightly lighter background for the title */
+}
+
+.dulieu-section {
+    flex: 1; /* Allow both sections to take equal space */
+    text-align: justify; /* Justify text */
+}
+
+/* Map_images */
+MapImages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.map-box {
+    flex: 1 1 300px;
+    min-width: 300px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for map images */
+.map-box:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.map-box img {
+    width: 15%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.map-box h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Active Map Image */
+.map-box img.active {
+    border: 3px ;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dulieu {
+        width: 90%;
+    }
+
+    .MapImages {
+        flex-direction: column;
+    }
+}
+/* Phần chứa logo T và CT */
+.team-container {
+    display: flex;
+    justify-content: space-between; /* Đẩy hai khối sang hai bên */
+    align-items: flex-start; /* Căn hai khối trên cùng hàng */
+    gap: 20px; /* Khoảng cách giữa các khối */
+}
+.team {
+    width: 45%; /* Makes each team take up 45% of the width */
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between; /* Space between agents and logo */
+    align-items: center; /* Center the items vertically */
+}
+
+h5 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Terrorist and Counter-Terrorist Sections */
+.team.terrorist {
+    background-color: #b83f3f;
+}
+
+.team.counter-terrorist {
+    background-color: #3f70b8;
+}
+
+/* Agent Images and Logo */
+.agents {
+    display: flex;
+    flex-direction: column; /* Arrange the agents vertically */
+    align-items: center; /* Center the agents */
+    gap: 10px; /* Space between the agents */
+}
+
+.agent img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.agent.hidden {
+    display: none;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-left: 10px; /* Space between agents and logo */
+}
+
+/* Styling for 'Choose Team' message */
+.agent p {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Thêm hiệu ứng cho nút (nếu có) */
+
+
+button:hover {
+    background-color: #0056b3;
+}
+.hidden {
+    display: none;
+}
+
+/*class= skins */
+.market {
+    border: 4px solid blue;  /* Viền màu xanh, độ dày 4px */
+    padding: 20px;           /* Khoảng cách giữa nội dung và viền */
+    margin: 20px;            /* Khoảng cách xung quanh phần tử */
+    border-radius: 10px;     /* Bo góc viền nếu muốn */
+    background-color: dark /* Optional: thêm màu nền nhẹ cho phần nội dung */
+  }
+  
+  .market h2, .market h3 {
+    margin-bottom: 10px;  /* Thêm khoảng cách dưới tiêu đề */
+  }
+  
+  .market p {
+    margin-bottom: 15px;  /* Thêm khoảng cách dưới đoạn văn */
+  }
+  
+  .market ul {
+    margin-left: 1px;    /* Thêm khoảng cách cho các mục trong danh sách */
+  }
+
+/*skin_csgo */
+.skins, .see-more {
+    border: 2px solid;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.skins {
+    border-color: rgb(15, 0, 128); /* Green border for the skins gallery */
+}
+
+.skins h3 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.skins img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.skins img:hover {
+    transform: scale(3.2); /* Phóng to ảnh khi di chuyển chuột */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Thêm bóng mờ */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Ẩn modal theo mặc định */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+}
+.content {
+    border: 4px solid blue;  /* Viền màu xanh, độ dày 4px */
+    padding: 20px;           /* Thêm khoảng cách giữa nội dung và viền */
+    margin: 20px;            /* Tạo khoảng cách xung quanh phần tử */
+    border-radius: 10px;     /* Optional: bo góc viền nếu muốn */
+  }
+
+/*tournament */
+.container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  /* Container bên trái */
+  .left-container {
+    width: 70%;
+  }
+  
+  /* Container bên phải */
+  .right-container {
+    width: 35%;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Phần Tournament */
+  .tournament-container {
+    background: linear-gradient(to right, #ff7f00, #007bff); /* Màu nền cam và xanh */
+    padding: 20px;
+    border-radius: 10px; /* Bo góc */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    margin-bottom: 40px;
+  }
+  
+  .tournament p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  /*Video-CS:GO tournament crowd in action */
+  figcaption {
+    text-align: center;
+    font-size: 18px; /* Tăng kích thước chữ */
+    color: white; /* Đổi màu chữ thành trắng */
+    margin-top: 10px;
+  }
+  
+  .csgo_crowds {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Nút Top Player */
+  .slide-show {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .slide-show button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slide-show button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Phần Cộng đồng và Sự nghiệp */
+  .career-community {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .career-community h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .career-community p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.1;
+    text-align: left;
+  }
+  
+ /*Community and career in CS:GO */ 
+ .career-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px; /* Tạo khoảng cách giữa các liên kết */
+  }
+  
+  .career-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .career-links li {
+    width: 100%;
+  }
+  
+  .career-links a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block; /* Làm cho liên kết chiếm toàn bộ chiều rộng */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .career-links a:hover {
+    background-color: #007bff;
+    color: white;
+}
+@keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Container hiệu ứng */
+  .tournament-container,
+  .career-community {
+    opacity: 0; /* Ban đầu ẩn */
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.5s; /* Delay để hiệu ứng diễn ra từ từ */
+  }
+  
+  /* Container bên trái và bên phải */
+  .left-container, .right-container {
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.5s; /* Delay để hiệu ứng diễn ra từ từ */
+  }
+  
+  /* Cải thiện cho việc xuất hiện của các phần tử */
+  .tournament-container.appear, .career-community.appear, .left-container.appear, .right-container.appear {
+    opacity: 1;
+}
+
+
+/*Tip_and_Tricks */
+.tip_and_trick {
+    background-color: rgb(129, 129, 152);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    text-align: left; /* Căn chỉnh tất cả chữ sang bên trái */
+}
+
+.tip_and_trick h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tip_and_trick p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.tip_and_trick ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tip_and_trick ul li {
+    margin: 10px 0;
+}
+
+.tip_and_trick ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #1e90ff;
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tip_and_trick ul li a:hover {
+    background-color: #1e90ff;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/*reference */
+.reference {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Nền đen */
+    color: #ffffff; /* Chữ trắng */
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, #ff7f00, #00aaff); /* Viền màu cam và xanh da trời */
+    border-image-slice: 1;
+    padding: 20px;
+    max-width: 100%; /* Khung rộng tối đa */
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex; /* Sử dụng flexbox để bố trí nội dung */
+    flex-direction: row; /* Bố trí theo chiều ngang */
+    justify-content: space-between;
+    align-items: flex-start; /* Căn chỉnh các phần tử ở phía trên cùng */
+}
+
+/* Tiêu đề với kiểu chữ đẹp hơn */
+.csgo_refernce {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 65%; /* Chiếm phần lớn không gian cho chữ */
+}
+
+/* Đoạn văn mô tả ngắn */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Liên kết với màu xanh */
+a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff7f00;
+    text-decoration: underline;
+}
+
+/* Tạo khoảng cách đẹp giữa các liên kết */
+a + a {
+    margin-left: 15px;
+}
+
+/* Căn chỉnh các phần tử ở trong .reference để có thể hiển thị hình ảnh bên phải */
+.reference {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align items to the top of the container */
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+.text-content {
+    flex: 1; /* Allow text to take up remaining space */
+    margin-right: 20px; /* Give some space between text and image */
+}
+
+.image-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.image-content a {
+    margin-bottom: 20px; /* Space between images */
+}
+
+.reference img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng phóng to khi hover vào ảnh */
+.reference img:hover {
+    transform: scale(1.1);
+}
+
+/* Định dạng cho phần mô tả về Faceit */
+p + a {
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Tạo khoảng cách giữa các phần */
+.reference p + p {
+    margin-top: 20px;
+}
+
+
+/*Designer */
+.designer-card {
+  background: linear-gradient;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 700px; /* Tăng chiều rộng để chứa thêm phần bên phải */
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Tạo khoảng cách giữa các phần */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.designer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.designer-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #4caf50;
+}
+
+.information {
+  flex: 1; /* Chiếm không gian còn lại của phần bên trái */
+  margin-right: 20px;
+}
+
+.information h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+#designer-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+#designer-role {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #e8f5e9;
+  border-radius: 5px;
+}
+
+#designer-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+#designer-university,
+#designer-id,
+#designer-class {
+  font-size: 14px;
+  color: #777;
+}
+
+#designer-id {
+  margin-top: 10px;
+}
+
+#designer-class {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.additional-info {
+  width: 200px; /* Chiều rộng cố định cho phần thông tin bổ sung bên phải */
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+
+    
+
